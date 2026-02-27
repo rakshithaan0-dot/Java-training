@@ -1,0 +1,17 @@
+package exceptions;
+
+public class ThrowableDemo {
+    static void test() throws Throwable{
+        throw new Throwable("Something went wrong!");
+    }
+
+    public static void main(String[] args) {
+        try {
+            test();
+        }
+        catch (Throwable t){
+            System.out.println("Handled:" + t);
+            System.out.println("Handled: "+ t.getMessage());
+        }
+    }
+}
